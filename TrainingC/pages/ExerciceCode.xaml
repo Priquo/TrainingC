@@ -1,0 +1,36 @@
+﻿<Page x:Class="TrainingC.pages.ExerciceCode"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TrainingC.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExerciceCode">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="199*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="747*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button x:Name="buttonShowDescription" Click="buttonShowDescription_Click" Margin="10 0">Задание</Button>
+            <Button x:Name="buttonClear" Margin="10 0" Click="buttonClear_Click">Очистить</Button>
+            <Button x:Name="buttonSaveCode" Margin="10 0">Сохранить</Button>
+            <Button x:Name="buttonCompileCode" Margin="10 0">Скомпилировать</Button>
+            <Button x:Name="buttonCheckProgram" Margin="10 0">Запуск проверки</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <Button x:Name="buttonTemplateIF" Click="buttonCasesTemplates_Click" Margin="0 10">if</Button>
+            <Button x:Name="buttonTemplateWHILE" Margin="0 10" Click="buttonCasesTemplates_Click">while</Button>
+            <Button x:Name="buttonTemplateDOWHILE" Click="buttonCasesTemplates_Click" Margin="0 10" Height="40">
+                <TextBlock TextWrapping="Wrap">do...while</TextBlock>
+            </Button>
+            <Button x:Name="buttonTemplateFOR" Click="buttonCasesTemplates_Click" Margin="0 10">for</Button>
+        </StackPanel>
+        <TextBox x:Name="textBoxProgramCode" SelectionChanged="textBoxProgramCode_SelectionChanged" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" AcceptsTab="True" AcceptsReturn="True"/>
+    </Grid>
+</Page>
