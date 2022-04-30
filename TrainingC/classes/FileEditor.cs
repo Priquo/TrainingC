@@ -7,7 +7,7 @@ using System.IO;
 
 namespace TrainingC.classes
 {
-    static class FileEditor
+    static public class FileEditor
     {
         static public string[] GetAllFilesPath (string pathToFolder)
         {

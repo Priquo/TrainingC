@@ -28,7 +28,7 @@ namespace TrainingC.pages
         {
             InitializeComponent();
             this.exercice = exercice;
-            startTemplateCode = "#include <stdio.h>\n\n" + exercice.MethodSignature + "\n{\n\n}";
+            startTemplateCode = "#include <stdio.h>\n\n" + exercice.MethodSignature + "\t" + @"// после типа укажите наименование аргумента - это ваши проверяемые параметры" + "\n{\n\n}";
             textBoxProgramCode.Text = startTemplateCode;
         }
         private void buttonShowDescription_Click(object sender, RoutedEventArgs e)

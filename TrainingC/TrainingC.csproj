@@ -14,6 +14,21 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -126,6 +141,405 @@
     <None Include="exercicePrograms\compiler\i686-pc-mingw32\include\windowsx.h16" />
     <None Include="exercicePrograms\compiler\i686-pc-mingw32\include\winnt.rh" />
     <None Include="exercicePrograms\compiler\i686-pc-mingw32\include\winuser.rh" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\binmode.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\crt1.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\crt1u.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\crt2.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\crt2u.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\crtbegin.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\crtend.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\CRT_fp10.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\CRT_fp8.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\CRT_glob.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\CRT_noglob.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\dllcrt1.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\dllcrt2.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\gcrt0.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\gcrt1.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\gcrt2.o" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\ldscripts\i386pe.x" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\ldscripts\i386pe.xa" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\ldscripts\i386pe.xbn" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\ldscripts\i386pe.xn" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\ldscripts\i386pe.xr" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\ldscripts\i386pe.xu" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libaclui.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libactiveds.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libadsldpc.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libadvapi32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libamstrmid.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libapcups.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libauthz.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libavicap32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libavifil32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libavrt.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libbcrypt.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libbootvid.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libbrowcli.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libbthprops.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcabinet.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcap.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcfgmgr32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libclasspnp.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libclfsw32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libclusapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcmutil.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcomctl32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcomdlg32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libconnect.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcredui.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcrtdll.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcrypt32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcryptnet.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcryptsp.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcryptxml.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libcscapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libctl3d32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd2d1.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3d11.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3d8.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3d9.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_33.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_34.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_35.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_36.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_37.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_38.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_39.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_40.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_41.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_42.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_43.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_46.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcompiler_47.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcsxd.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcsxd_43.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dcsx_46.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dim.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3drm.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_33.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_34.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_35.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_36.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_37.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_38.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_39.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_40.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_41.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_42.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx10_43.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx11.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx11_42.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx11_43.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx8d.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9d.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_24.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_25.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_26.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_27.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_28.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_29.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_30.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_31.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_33.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_34.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_35.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_36.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_37.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_38.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_39.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_40.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_41.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_42.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dx9_43.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libd3dxof.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdavclnt.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdavhlpr.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdbgeng.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdbghelp.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libddraw.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdelayimp.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdevmgr.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdevobj.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdevrtl.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdfscli.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdhcpcsvc.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdhcpcsvc6.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdhcpsapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdinput.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdinput8.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdl.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdlcapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdmoguids.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdnsapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdplayx.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdpnaddr.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdpnet.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdpnlobby.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdpvoice.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdsetup.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdsound.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdsrole.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdssec.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdwmapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdwrite.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdxapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdxerr8.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdxerr9.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdxgi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdxguid.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libdxva2.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libeapp3hst.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libeappcfg.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libeappgnui.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libeapphost.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libeappprxy.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libelscore.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libesent.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libevr.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libfaultrep.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libfwpuclnt.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libgdi32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libgdiplus.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libglaux.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libglu32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libglut.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libglut32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libgmon.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libgpapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libgpedit.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libgpprefcl.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libgpscript.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libgptext.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libhal.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libhid.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libhidclass.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libhidparse.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libhttpapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libicmui.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libigmpagnt.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libimagehlp.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libimm32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libiphlpapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libiscsidsc.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libjcl.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libkernel32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libks.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libksguid.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libksproxy.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libksuser.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libktmw32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\liblaipe2.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\liblargeint.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\liblocationapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\liblogoncli.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\liblz32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libm.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmapi32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmcd.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmf.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmfcuia32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmfplat.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmfuuid.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmgmtapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmingw32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmingwex.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmingwthrd.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmoldname.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmpr.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmprapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmqrt.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsacm32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmscms.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsctf.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsctfmonitor.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsdmo.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsdrm.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmshtml.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmshtmled.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsimg32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmstask.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsvcp60.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsvcr100.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsvcr110.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsvcr120.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsvcr120d.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsvcr80.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsvcr90.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsvcr90d.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsvcrt.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmsvfw32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libmswsock.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libncrypt.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libnddeapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libndfapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libndis.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libnetapi32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libnetjoin.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libnetutils.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libneuloop4.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libneuloop6.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libnewdev.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libnormaliz.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libntdll.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libntdsapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libntmsapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libntoskrnl.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libodbc32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libodbccp32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libole32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\liboleacc.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\liboleaut32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libolecli32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\liboledlg.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libolepro32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libolesvr32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libolethk32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libopengl32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libp2p.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libp2pcollab.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libp2pgraph.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libpcwum.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libpdh.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libpdhui.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libpenwin32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libpkpd32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libportabledeviceguids.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libpowrprof.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libpsapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libquartz.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libqutil.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libqwave.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librasapi32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librasdlg.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libresutil.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librpcdce4.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librpcdiag.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librpchttp.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librpcns4.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librpcrt4.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librstrmgr.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librtm.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\librtutils.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libruntimeobject.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libsamcli.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libsapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libschedcli.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libscrnsave.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libscrnsavw.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libscsiport.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libsecur32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libsensorsapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libsetupapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libshell32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libshfolder.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libshlwapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libslc.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libslcext.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libslwga.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libsnmpapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libspoolss.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libsrvcli.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libsspicli.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libstrmiids.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libsvrapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libsxs.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libt2embed.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libtapi32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libtbs.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libtdh.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libtdi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libtxfw32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\liburl.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\liburlmon.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libusbcamd.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libusbcamd2.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libusbd.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libusbport.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libuser32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libuserenv.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libusp10.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libuuid.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libuxtheme.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libvdmdbg.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libversion.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libvfw32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libvideoprt.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libvirtdisk.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libvssapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libvsstrace.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libvss_ps.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwbemuuid.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwdsclient.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwdsclientapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwdscore.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwdscsl.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwdsimage.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwdstptc.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwdsupgcompl.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwdsutil.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwecapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwer.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwevtapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwevtfwd.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwiadss.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwin32k.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwin32spl.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwindowscodecs.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwinhttp.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwininet.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwinmm.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwinscard.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwinspool.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwinstrm.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwintrust.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwinusb.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwkscli.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwlanapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwlanui.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwlanutil.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwldap32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwmcodecdspuuid.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwmilib.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwow32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libws2_32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwsdapi.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwsnmp32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwsock32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwst.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libwtsapi32.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libx3daudio.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libx3daudio1_2.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libx3daudio1_3.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libx3daudio1_4.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libx3daudio1_5.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libx3daudio1_6.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libx3daudio1_7.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libx3daudiod1_7.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxapofx.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxapofx1_0.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxapofx1_1.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxapofx1_2.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxapofx1_3.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxapofx1_4.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxapofx1_5.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxapofxd1_5.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxaudio2_8.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxinput.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxinput1_1.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxinput1_2.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxinput1_3.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxinput1_4.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libxinput9_1_0.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\libz.a" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\pkgconfig\zlib.pc" />
+    <None Include="exercicePrograms\compiler\i686-pc-mingw32\lib\txtmode.o" />
     <None Include="exercicePrograms\compiler\include\c++\9.2.0\algorithm" />
     <None Include="exercicePrograms\compiler\include\c++\9.2.0\any" />
     <None Include="exercicePrograms\compiler\include\c++\9.2.0\array" />
@@ -441,6 +855,7 @@
     <None Include="exercicePrograms\compiler\share\man\man7\fsf-funding.7" />
     <None Include="exercicePrograms\compiler\share\man\man7\gfdl.7" />
     <None Include="exercicePrograms\compiler\share\man\man7\gpl.7" />
+    <None Include="exercices\caseIF\Level1.hel" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -450,12 +865,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="exercices\caseIF\Level1.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="exercicePrograms\compiler\i686-pc-mingw32\lib\" />
     <Folder Include="exercicePrograms\programs\" />
     <Folder Include="exercicePrograms\tests\" />
     <Folder Include="exercices\caseARRAY\" />
@@ -2674,6 +3083,18 @@
     <Content Include="exercicePrograms\compiler\share\gcc-9.2.0\python\libstdcxx\v6\xmethods.py" />
     <Content Include="exercicePrograms\compiler\share\gcc-9.2.0\python\libstdcxx\v6\__init__.py" />
     <Content Include="exercicePrograms\compiler\share\gcc-9.2.0\python\libstdcxx\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
