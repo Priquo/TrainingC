@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrainingC.classes;
-using TrainingC.pages;
 
 namespace TrainingC.pages
 {
@@ -37,6 +36,17 @@ namespace TrainingC.pages
         {
             Button button = (Button)sender;
             PageLoader.MainFrame.Navigate(new ExerciceCode(trainLoader.ListExercices.FirstOrDefault(x => x.ID == Convert.ToInt32(button.Uid))));
+        }
+
+        private void buttonStudyMaterial_Click(object sender, RoutedEventArgs e)
+        {
+            StudyMaterials materials = new StudyMaterials();
+            materials.Show();
+        }
+
+        private void buttonBack_Click(object sender, RoutedEventArgs e)
+        {
+            PageLoader.MainFrame.GoBack();
         }
     }
 }

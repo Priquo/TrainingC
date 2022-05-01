@@ -1,0 +1,19 @@
+﻿<Window x:Class="TrainingC.StudyMaterials"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrainingC"
+        mc:Ignorable="d"
+        Title="StudyMaterials" Height="300" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock TextWrapping="Wrap">
+            Лекции размещены по данному <Hyperlink NavigateUri="https://docs.google.com/document/d/1hPmx4SQKyY0mKY9nXh52XqID3VT10aiHw3xTeS4yfXU/edit" RequestNavigate="Hyperlink_RequestNavigate">адресу</Hyperlink> в сети Интернет
+            </TextBlock>
+            <TextBlock  TextWrapping="Wrap">
+            Видеолекции размещены по данному <Hyperlink NavigateUri="https://www.youtube.com/watch?v=SU9W_dUaC5w&amp;list=PLKN9afB3KXdYymHUvkC0mzBBdcXms9QJ" RequestNavigate="Hyperlink_RequestNavigate">адресу</Hyperlink> в сети Интернет
+            </TextBlock>
+        </StackPanel>        
+    </Grid>
+</Window>

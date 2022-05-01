@@ -13,6 +13,6 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
         </Grid.RowDefinitions>
-        <Frame x:Name="frameMain" Grid.Column="0"/>
+        <Frame x:Name="frameMain" Grid.Column="0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

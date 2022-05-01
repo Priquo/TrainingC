@@ -9,7 +9,7 @@ namespace TrainingC.classes
 {
     static public class FileEditor
     {
-        static public string[] GetAllFilesPath (string pathToFolder)
+        static public string[] GetAllFilesPath(string pathToFolder)
         {
             return Directory.GetFiles(pathToFolder);
         }
@@ -28,6 +28,37 @@ namespace TrainingC.classes
                 }
             }
             return str;
+        }
+        static public bool CreateFolder(string directoryName)
+        {
+            bool result = false;
+            try
+            {
+                if (!Directory.Exists(directoryName))
+                {
+                    Directory.CreateDirectory(directoryName);
+                }
+                result = true;
+            }
+            catch
+            { }
+            return result;
+        }
+        static public bool CreateOrOpenFile(string fileName, string path, string fileContent)
+        {
+            bool result = false;
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(File.Open(path, FileMode.OpenOrCreate)))
+                {
+                    sw.Write(fileContent);
+                }
+                result = true;
+            }
+            catch
+            {
+            }
+            return result;
         }
     }
 }

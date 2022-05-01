@@ -19,7 +19,7 @@
         <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal">
             <Button x:Name="buttonShowDescription" Click="buttonShowDescription_Click" Margin="10 0">Задание</Button>
             <Button x:Name="buttonClear" Margin="10 0" Click="buttonClear_Click">Очистить</Button>
-            <Button x:Name="buttonSaveCode" Margin="10 0">Сохранить</Button>
+            <Button x:Name="buttonSaveCode" Margin="10 0" Click="buttonSaveCode_Click">Сохранить</Button>
             <Button x:Name="buttonCompileCode" Margin="10 0">Скомпилировать</Button>
             <Button x:Name="buttonCheckProgram" Margin="10 0">Запуск проверки</Button>
         </StackPanel>
