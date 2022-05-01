@@ -3,7 +3,7 @@
 void main()
 {
 	system("chcp 1251>nul");
-	double temp = MaxSumFromThreeNumbers(5, 5, 5);
+	/*double temp = MaxSumFromThreeNumbers(5, 5, 5);
 	if (temp != 10)
 		printf("Ваша функция работает неправильно с параметрами: 5, 5, 5");
 	else
@@ -18,5 +18,6 @@ void main()
 	if (temp != (double)(0.3))
 		printf("\nВаша функция работает неправильно с параметрами: 0, 0.3, -5");
 	else
-		printf("\nВаша функция работает правильно с параметрами: 0, 0.3, -5");
+		printf("\nВаша функция работает правильно с параметрами: 0, 0.3, -5");*/
+	MaxNumberFromThreeNumbersTest();
 }

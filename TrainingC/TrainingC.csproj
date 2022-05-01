@@ -49,6 +49,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>images\c.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -873,11 +876,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="exercicePrograms\programs\" />
-    <Folder Include="exercicePrograms\tests\" />
     <Folder Include="exercices\caseARRAY\" />
     <Folder Include="exercices\caseCYCLES\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="exercicePrograms\tests\MainHeader.h" />
+    <Content Include="exercicePrograms\tests\MaxNumberFromThreeNumbersTest.c" />
+    <Content Include="exercicePrograms\tests\Main.c" />
+    <Resource Include="images\c.ico" />
     <Content Include="exercicePrograms\compiler\bin\addr2line.exe" />
     <Content Include="exercicePrograms\compiler\bin\ar.exe" />
     <Content Include="exercicePrograms\compiler\bin\as.exe" />

@@ -142,6 +142,7 @@
     <ClInclude Include="MainHeader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MaxNumberFromThreeNumbersTest.c" />
     <ClCompile Include="Source.c" />
     <ClCompile Include="test1.c" />
   </ItemGroup>
