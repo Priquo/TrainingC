@@ -31,7 +31,7 @@ namespace TrainingC.pages
         {
             InitializeComponent();
             this.exercice = exercice;
-            startTemplateCode = "#include <stdio.h>\n#include \"../test/MainHeader.h\"\n\n" + exercice.MethodSignature + "\t" + @"// после типа укажите наименование аргумента - это ваши проверяемые параметры" + "\n{\n\n}";
+            startTemplateCode = "#include <stdio.h>\n#include \"../../tests/MainHeader.h\"\n\n" + exercice.MethodSignature + "\t" + @"// после типа укажите наименование аргумента - это ваши проверяемые параметры" + "\n{\n\n}";
             textBoxProgramCode.Text = startTemplateCode;
         }
         private void buttonShowDescription_Click(object sender, RoutedEventArgs e)
@@ -86,7 +86,8 @@ namespace TrainingC.pages
             return flag;
         }
         private void buttonSaveCode_Click(object sender, RoutedEventArgs e)
-        {          
+        {
+            FileEditor.DeleteFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c");
             if (SaveFileFromTextBox())
             {
                MessageBox.Show("Файл успешно сохранен", "Успех", MessageBoxButton.OK, MessageBoxImage.Asterisk);
@@ -100,6 +101,7 @@ namespace TrainingC.pages
             Button buttonClicked = (Button)sender;
             if (buttonClicked.Name == "buttonCompileCode")
                 runProgramCommand = "";
+            FileEditor.DeleteFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c");
             if (SaveFileFromTextBox() && ProgramMaker.AddToHeaderMethodSignature(exercice.MethodSignature, pathToTests + "MainHeader.h") && ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()"))
             {
                 if (ProgramMaker.MakeBatFile(pathToProgram + "autorun.bat", exercice.NameMethod, runProgramCommand))
@@ -108,6 +110,7 @@ namespace TrainingC.pages
                     try
                     {
                         proc = new Process();
+                        proc.StartInfo.WorkingDirectory = pathToProgram;
                         proc.StartInfo.FileName = "autorun.bat";
                         proc.StartInfo.CreateNoWindow = false;
                         proc.Start();

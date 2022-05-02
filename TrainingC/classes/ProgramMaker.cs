@@ -11,11 +11,9 @@ namespace TrainingC.classes
     {
         public static bool MakeBatFile(string path, string programFileName, string runOrNot)
         {
-            string isEchoOf = runOrNot == "" ? "echo off\n" : "";
-            string isPauseNeeds = runOrNot == "" ? "" : "\npause";
-            string batText = isEchoOf + @"..\compiler\bin\gcc.exe -c ../tests/Main.c " + programFileName + "/" + programFileName + ".c\n" +
-                @"..\compiler\bin\gcc.exe -c ../tests/Main.o " + programFileName + "/" + programFileName + ".o -o " + programFileName +
-                "\n" + runOrNot + isPauseNeeds;
+            string batText = @"..\compiler\bin\gcc.exe -c ../tests/Main.c ../tests/" + programFileName + "Test.c " + programFileName + "/" + programFileName + ".c\n" +
+                @"..\compiler\bin\gcc.exe Main.o  " + programFileName + "Test.o " + programFileName + ".o -o " + programFileName +
+                "\n" + runOrNot + "\npause";
             bool result = FileEditor.CreateOrOpenFile(path, batText);            
             return result;
         }
@@ -44,10 +42,10 @@ namespace TrainingC.classes
             List<string> contentCode = FileEditor.ReadFile(mainFilePath);          
             try
             {
-                if (contentCode.Contains("\t//" + testName + ";"))
-                    contentCode[contentCode.IndexOf("\t//" + testName + ";")] = "\t" + testName + ";";
                 if (contentCode.Contains("\t" + testName + ";"))
                     return true;
+                if (contentCode.Contains("\t//" + testName + ";"))
+                    contentCode[contentCode.IndexOf("\t//" + testName + ";")] = "\t" + testName + ";";
                 using (StreamWriter sw = new StreamWriter(mainFilePath, false))
                 {
                     foreach (var str in contentCode)
