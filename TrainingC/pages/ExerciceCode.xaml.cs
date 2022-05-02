@@ -115,6 +115,10 @@ namespace TrainingC.pages
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Ошибка при подготовке программы к запуску", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

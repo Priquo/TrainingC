@@ -13,8 +13,8 @@ namespace TrainingC.classes
         {
             string isEchoOf = runOrNot == "" ? "echo off\n" : "";
             string isPauseNeeds = runOrNot == "" ? "\npause" : "";
-            string batText = isEchoOf + @"compiler\bin\gcc.exe -c ../tests/Main.c " + programFileName + ".c\n" +
-                @"compiler\bin\gcc.exe -c ../tests/Main.o " + programFileName + ".o -o " + programFileName +
+            string batText = isEchoOf + @"compiler\bin\gcc.exe -c ../tests/Main.c " + programFileName + "/" + programFileName + ".c\n" +
+                @"compiler\bin\gcc.exe -c ../tests/Main.o " + programFileName + "/" + programFileName + ".o -o " + programFileName +
                 "\n" + runOrNot + isPauseNeeds;
             bool result = FileEditor.CreateOrOpenFile(path, batText);            
             return result;
