@@ -73,6 +73,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="classes\ProgramMaker.cs" />
     <Compile Include="StudyMaterials.xaml.cs">
       <DependentUpon>StudyMaterials.xaml</DependentUpon>
     </Compile>

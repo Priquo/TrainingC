@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace TrainingC.pages
         int selectionIndexInCode = 0;
         string startTemplateCode;
         string pathToProgram = "../../exercicePrograms/programs/";
+        string pathToTests = "../../exercicePrograms/tests/";
         Exercices exercice;
         public ExerciceCode(Exercices exercice)
         {
@@ -77,7 +79,7 @@ namespace TrainingC.pages
             bool flag = false;            
             if (FileEditor.CreateFolder(pathToProgram + exercice.NameMethod))
             {
-                if (FileEditor.CreateOrOpenFile(exercice.NameMethod + ".c", pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c", textBoxProgramCode.Text))
+                if (FileEditor.CreateOrOpenFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c", textBoxProgramCode.Text))
                 {
                     MessageBox.Show("Файл успешно сохранен", "Успех", MessageBoxButton.OK, MessageBoxImage.Asterisk);
                     flag = true;
@@ -85,6 +87,34 @@ namespace TrainingC.pages
             }
             if(!flag)
                 MessageBox.Show("Файл не сохранен :(", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+        private void CompileOrRunProgram(object sender, RoutedEventArgs e)
+        {
+            string runProgramCommand = exercice.NameMethod;
+            Button buttonClicked = (Button)sender;
+            if (buttonClicked.Name == "buttonCompileCode")
+                runProgramCommand = "";
+            if (ProgramMaker.AddToHeaderMethodSignature(exercice.MethodSignature, pathToTests + "MainHeader.h") && ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()"))
+            {
+                if (ProgramMaker.MakeBatFile(pathToProgram + "autorun.bat", exercice.NameMethod, runProgramCommand))
+                {
+                    Process proc = null;
+                    try
+                    {
+                        proc = new Process();
+                        proc.StartInfo.WorkingDirectory = pathToProgram;
+                        proc.StartInfo.FileName = "autorun.bat";
+                        proc.StartInfo.CreateNoWindow = false;
+                        proc.Start();
+                        proc.WaitForExit();
+                        MessageBox.Show("Сборка завершена", "Успех", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.StackTrace.ToString(),"Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
         }
     }
 }

@@ -44,7 +44,7 @@ namespace TrainingC.classes
             { }
             return result;
         }
-        static public bool CreateOrOpenFile(string fileName, string path, string fileContent)
+        static public bool CreateOrOpenFile(string path, string fileContent)
         {
             bool result = false;
             try
