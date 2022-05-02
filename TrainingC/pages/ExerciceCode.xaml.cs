@@ -115,7 +115,6 @@ namespace TrainingC.pages
                         proc.StartInfo.CreateNoWindow = false;
                         proc.Start();
                         proc.WaitForExit();
-                        MessageBox.Show("Сборка завершена", "Успех", MessageBoxButton.OK, MessageBoxImage.Asterisk);
                         FileEditor.DeleteFile(pathToProgram + "autorun.bat");
                     }
                     catch (Exception ex)
