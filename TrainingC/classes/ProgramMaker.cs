@@ -24,6 +24,9 @@ namespace TrainingC.classes
             bool result = false;
             try
             {
+                List<string> dataHeader = FileEditor.ReadFile(headerPath);
+                if (dataHeader.Contains(methodSignature + ";"))
+                    return true;
                 using (StreamWriter sw = new StreamWriter(File.Open(headerPath, FileMode.Append)))
                 {
                     sw.WriteLine(methodSignature + ";");
@@ -38,22 +41,22 @@ namespace TrainingC.classes
         public static bool MakeTestUncommentedInMainFile(string mainFilePath, string testName)
         {
             bool result = false;
-            List<string> contentCode = FileEditor.ReadFile(mainFilePath);
-            if (contentCode.Contains(testName))
+            List<string> contentCode = FileEditor.ReadFile(mainFilePath);          
+            try
             {
-                contentCode[contentCode.IndexOf("\t//" + testName + ";")] = "\t" + testName + ";";
-                try
+                if (contentCode.Contains("\t//" + testName + ";"))
+                    contentCode[contentCode.IndexOf("\t//" + testName + ";")] = "\t" + testName + ";";
+                if (contentCode.Contains("\t" + testName + ";"))
+                    return true;
+                using (StreamWriter sw = new StreamWriter(mainFilePath, false))
                 {
-                    using (StreamWriter sw = new StreamWriter(mainFilePath, false))
-                    {
-                        foreach (var str in contentCode)
-                            sw.WriteLine(str);
-                    }
-                    result = true;
+                    foreach (var str in contentCode)
+                        sw.WriteLine(str);
                 }
-                catch
-                {
-                }
+                result = true;
+            }
+            catch
+            {
             }
             return result;
         }

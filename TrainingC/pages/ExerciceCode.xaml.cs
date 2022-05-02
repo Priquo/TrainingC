@@ -73,19 +73,25 @@ namespace TrainingC.pages
         {
             selectionIndexInCode = textBoxProgramCode.SelectionStart;
         }
-
-        private void buttonSaveCode_Click(object sender, RoutedEventArgs e)
+        private bool SaveFileFromTextBox()
         {
-            bool flag = false;            
+            bool flag = false;
             if (FileEditor.CreateFolder(pathToProgram + exercice.NameMethod))
             {
                 if (FileEditor.CreateOrOpenFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c", textBoxProgramCode.Text))
                 {
-                    MessageBox.Show("Файл успешно сохранен", "Успех", MessageBoxButton.OK, MessageBoxImage.Asterisk);
                     flag = true;
                 }
             }
-            if(!flag)
+            return flag;
+        }
+        private void buttonSaveCode_Click(object sender, RoutedEventArgs e)
+        {          
+            if (SaveFileFromTextBox())
+            {
+               MessageBox.Show("Файл успешно сохранен", "Успех", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            }
+            else
                 MessageBox.Show("Файл не сохранен :(", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
         private void CompileOrRunProgram(object sender, RoutedEventArgs e)
@@ -94,7 +100,7 @@ namespace TrainingC.pages
             Button buttonClicked = (Button)sender;
             if (buttonClicked.Name == "buttonCompileCode")
                 runProgramCommand = "";
-            if (ProgramMaker.AddToHeaderMethodSignature(exercice.MethodSignature, pathToTests + "MainHeader.h") && ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()"))
+            if (SaveFileFromTextBox() && ProgramMaker.AddToHeaderMethodSignature(exercice.MethodSignature, pathToTests + "MainHeader.h") && ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()"))
             {
                 if (ProgramMaker.MakeBatFile(pathToProgram + "autorun.bat", exercice.NameMethod, runProgramCommand))
                 {
@@ -108,6 +114,7 @@ namespace TrainingC.pages
                         proc.Start();
                         proc.WaitForExit();
                         MessageBox.Show("Сборка завершена", "Успех", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+                        FileEditor.DeleteFile(pathToProgram + "autorun.bat");
                     }
                     catch (Exception ex)
                     {

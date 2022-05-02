@@ -60,5 +60,19 @@ namespace TrainingC.classes
             }
             return result;
         }
+        static public bool DeleteFile(string path)
+        {
+            bool result = false;
+            if (File.Exists(path))
+            {
+                try
+                {
+                    File.Delete(path);
+                    result = true;
+                }
+                catch { }
+            }
+            return result;
+        }
     }
 }
