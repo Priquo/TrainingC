@@ -108,7 +108,6 @@ namespace TrainingC.pages
                     try
                     {
                         proc = new Process();
-                        proc.StartInfo.WorkingDirectory = pathToProgram;
                         proc.StartInfo.FileName = "autorun.bat";
                         proc.StartInfo.CreateNoWindow = false;
                         proc.Start();

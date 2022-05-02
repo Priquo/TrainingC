@@ -12,9 +12,9 @@ namespace TrainingC.classes
         public static bool MakeBatFile(string path, string programFileName, string runOrNot)
         {
             string isEchoOf = runOrNot == "" ? "echo off\n" : "";
-            string isPauseNeeds = runOrNot == "" ? "\npause" : "";
-            string batText = isEchoOf + @"compiler\bin\gcc.exe -c ../tests/Main.c " + programFileName + "/" + programFileName + ".c\n" +
-                @"compiler\bin\gcc.exe -c ../tests/Main.o " + programFileName + "/" + programFileName + ".o -o " + programFileName +
+            string isPauseNeeds = runOrNot == "" ? "" : "\npause";
+            string batText = isEchoOf + @"..\compiler\bin\gcc.exe -c ../tests/Main.c " + programFileName + "/" + programFileName + ".c\n" +
+                @"..\compiler\bin\gcc.exe -c ../tests/Main.o " + programFileName + "/" + programFileName + ".o -o " + programFileName +
                 "\n" + runOrNot + isPauseNeeds;
             bool result = FileEditor.CreateOrOpenFile(path, batText);            
             return result;
