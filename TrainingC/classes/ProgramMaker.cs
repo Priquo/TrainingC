@@ -47,9 +47,8 @@ namespace TrainingC.classes
                 else if (contentCode.Contains("\t" + testName + ";") && shoudMakeTextComment)
                 {
                     contentCode[contentCode.IndexOf("\t" + testName + ";")] = "\t//" + testName + ";";
-                    return true;
                 }
-                if (contentCode.Contains("\t//" + testName + ";"))
+                if (contentCode.Contains("\t//" + testName + ";") && !shoudMakeTextComment)
                     contentCode[contentCode.IndexOf("\t//" + testName + ";")] = "\t" + testName + ";";
                 using (StreamWriter sw = new StreamWriter(mainFilePath, false))
                 {

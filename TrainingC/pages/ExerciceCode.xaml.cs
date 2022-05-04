@@ -121,6 +121,7 @@ namespace TrainingC.pages
                         MessageBox.Show(ex.StackTrace.ToString(),"Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     FileEditor.DeleteFile(pathToProgram + "autorun.bat");
+                    ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", true);
                 }
             }
             else
