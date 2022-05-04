@@ -36,14 +36,19 @@ namespace TrainingC.classes
             }
             return result;
         }
-        public static bool MakeTestUncommentedInMainFile(string mainFilePath, string testName)
+        public static bool MakeTestUncommentedInMainFile(string mainFilePath, string testName, bool shoudMakeTextComment)
         {
             bool result = false;
             List<string> contentCode = FileEditor.ReadFile(mainFilePath);          
             try
             {
-                if (contentCode.Contains("\t" + testName + ";"))
+                if (contentCode.Contains("\t" + testName + ";") && !shoudMakeTextComment)
                     return true;
+                else if (contentCode.Contains("\t" + testName + ";") && shoudMakeTextComment)
+                {
+                    contentCode[contentCode.IndexOf("\t" + testName + ";")] = "\t//" + testName + ";";
+                    return true;
+                }
                 if (contentCode.Contains("\t//" + testName + ";"))
                     contentCode[contentCode.IndexOf("\t//" + testName + ";")] = "\t" + testName + ";";
                 using (StreamWriter sw = new StreamWriter(mainFilePath, false))

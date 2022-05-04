@@ -102,7 +102,7 @@ namespace TrainingC.pages
             if (buttonClicked.Name == "buttonCompileCode")
                 runProgramCommand = "";
             FileEditor.DeleteFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c");
-            if (SaveFileFromTextBox() && ProgramMaker.AddToHeaderMethodSignature(exercice.MethodSignature, pathToTests + "MainHeader.h") && ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()"))
+            if (SaveFileFromTextBox() && ProgramMaker.AddToHeaderMethodSignature(exercice.MethodSignature, pathToTests + "MainHeader.h") && ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", false))
             {
                 if (ProgramMaker.MakeBatFile(pathToProgram + "autorun.bat", exercice.NameMethod, runProgramCommand))
                 {
@@ -115,12 +115,12 @@ namespace TrainingC.pages
                         proc.StartInfo.CreateNoWindow = false;
                         proc.Start();
                         proc.WaitForExit();
-                        FileEditor.DeleteFile(pathToProgram + "autorun.bat");
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.StackTrace.ToString(),"Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
+                    FileEditor.DeleteFile(pathToProgram + "autorun.bat");
                 }
             }
             else
