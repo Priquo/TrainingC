@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,13 +27,27 @@ namespace TrainingC.pages
         string startTemplateCode;
         string pathToProgram = "../../exercicePrograms/programs/";
         string pathToTests = "../../exercicePrograms/tests/";
-        Exercices exercice;
+        Exercices exercice, localExercice;
+        readonly Regex maskFunction = new Regex(@"(\b(void|int|double|float|char|struct|\*)(\[.*\])*\s*[a-zA-Z]{1,}\.*\(.*\))");
+        readonly Regex maskArguments = new Regex(@"(?<=\s*((void|int|double|float|char|struct|\*)(\[.*\])*)\s*)[a-zA-Z]{1,}");
         public ExerciceCode(Exercices exercice)
         {
             InitializeComponent();
             this.exercice = exercice;
-            startTemplateCode = "#include <stdio.h>\n#include \"../../tests/MainHeader.h\"\n\n" + exercice.MethodSignature + "\t" + @"// после типа укажите наименование аргумента - это ваши проверяемые параметры" + "\n{\n\n}";
-            textBoxProgramCode.Text = startTemplateCode;
+            localExercice = exercice;
+            string path = pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c";
+            startTemplateCode = "#include <stdio.h>\n#include \"../../tests/MainHeader.h\"\n\n" + exercice.MethodSignature + "\n" + @"//ПОСЛЕ НАЗВАНИЯ ФУНКЦИИ после типа укажите наименование аргумента - это ваши проверяемые параметры" + "\n{\n\n}";
+            if (FileEditor.IsFileExists(path))
+            {
+                textBoxProgramCode.Text = FileEditor.ReadFileToLine(path);
+            }
+            else
+            {                
+                textBoxProgramCode.Text = startTemplateCode;
+            }
+
+            var m = maskFunction.Match(textBoxProgramCode.Text).Value;
+            var b = maskArguments.Matches(m);
         }
         private void buttonShowDescription_Click(object sender, RoutedEventArgs e)
         {
@@ -95,14 +110,24 @@ namespace TrainingC.pages
             else
                 MessageBox.Show("Файл не сохранен :(", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
+
+        private void buttonGoBack_Click(object sender, RoutedEventArgs e)
+        {
+            PageLoader.MainFrame.GoBack();
+        }
+
         private void CompileOrRunProgram(object sender, RoutedEventArgs e)
         {
             string runProgramCommand = exercice.NameMethod;
             Button buttonClicked = (Button)sender;
+            
             if (buttonClicked.Name == "buttonCompileCode")
                 runProgramCommand = "";
             FileEditor.DeleteFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c");
-            if (SaveFileFromTextBox() && ProgramMaker.AddToHeaderMethodSignature(exercice.MethodSignature, pathToTests + "MainHeader.h") && ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", false))
+            SaveFileFromTextBox();
+
+            if (ProgramMaker.AddToHeaderMethodSignature(exercice.MethodSignature, pathToTests + "MainHeader.h") &&
+                ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", false))
             {
                 if (ProgramMaker.MakeBatFile(pathToProgram + "autorun.bat", exercice.NameMethod, runProgramCommand))
                 {

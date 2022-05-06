@@ -29,6 +29,15 @@ namespace TrainingC.classes
             }
             return str;
         }
+        static public string ReadFileToLine(string path)
+        {
+            string str = "";
+            using (StreamReader sr = new StreamReader(path))
+            {
+                str = sr.ReadToEnd();
+            }
+            return str;
+        }
         static public bool CreateFolder(string directoryName)
         {
             bool result = false;
@@ -73,6 +82,10 @@ namespace TrainingC.classes
                 catch { }
             }
             return result;
+        }
+        static public bool IsFileExists(string path)
+        {
+            return File.Exists(path);
         }
     }
 }

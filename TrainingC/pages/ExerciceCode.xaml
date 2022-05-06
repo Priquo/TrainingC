@@ -22,6 +22,7 @@
             <Button x:Name="buttonSaveCode" Margin="10 0" Click="buttonSaveCode_Click">Сохранить</Button>
             <Button x:Name="buttonCompileCode" Margin="10 0" Click="CompileOrRunProgram">Скомпилировать</Button>
             <Button x:Name="buttonCheckProgram" Margin="10 0" Click="CompileOrRunProgram">Запуск проверки</Button>
+            <Button x:Name="buttonGoBack" Margin="50 0" Click="buttonGoBack_Click">Назад</Button>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1">
             <Button x:Name="buttonTemplateIF" Click="buttonCasesTemplates_Click" Margin="0 10">if</Button>

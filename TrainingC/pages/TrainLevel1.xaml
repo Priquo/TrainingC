@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Row="0">
             <Button x:Name="buttonStudyMaterial" Click="buttonStudyMaterial_Click" Margin="10 0">Лекционный материал</Button>
-            <Button x:Name="buttonBack" Click="buttonBack_Click" Margin="10 0">Назад</Button>
+            <Button x:Name="buttonBack" Click="buttonBack_Click" Margin="10 0" Visibility="Hidden">Назад</Button>
         </StackPanel>
         <ListBox x:Name="listboxMain" ItemsSource="{Binding ListTitles}" HorizontalContentAlignment="Center" Grid.Row="1"/>
     </Grid>
