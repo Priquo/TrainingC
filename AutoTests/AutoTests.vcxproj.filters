@@ -29,5 +29,14 @@
     <ClCompile Include="MaxNumberFromThreeNumbersTest.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="MinNumberFromThreeNumbersTest.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="PlusOneMinusTwoZeroIsTenTest.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="SumSqrtOrSqrtSumTest.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
