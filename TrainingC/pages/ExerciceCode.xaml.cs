@@ -29,7 +29,8 @@ namespace TrainingC.pages
         string pathToTests = "../../exercicePrograms/tests/";
         Exercices exercice, localExercice;
         readonly Regex maskFunction = new Regex(@"(\b(void|int|double|float|char|struct|\*)(\[.*\])*\s*[a-zA-Z]{1,}\.*\(.*\))");
-        readonly Regex maskArguments = new Regex(@"(?<=\s*((void|int|double|float|char|struct|\*)(\[.*\])*)\s*)[a-zA-Z]{1,}");
+        //readonly Regex maskArguments = new Regex(@"(?<=\s*((void|int|double|float|char|struct|\*)(\[.*\])*)\s*)[a-zA-Z]{1,}");
+        readonly Regex maskArguments = new Regex(@"(\s*((void|int|double|float|char|struct|\*)(\[.*\])*)\s*)*[^a-zA-Z]{1,}[\(\)\,]*");
         public ExerciceCode(Exercices exercice)
         {
             InitializeComponent();
@@ -45,9 +46,19 @@ namespace TrainingC.pages
             {                
                 textBoxProgramCode.Text = startTemplateCode;
             }
-
-            var m = maskFunction.Match(textBoxProgramCode.Text).Value;
-            var b = maskArguments.Matches(m);
+            GetLocalMethodSignature();
+        }
+        void GetLocalMethodSignature()
+        {
+            var functionString = maskFunction.Match(textBoxProgramCode.Text).Value;
+            var tempStr = "";
+            foreach (var arg in maskArguments.Matches(functionString.Split('(')[1]))
+            {
+                tempStr += arg;
+            }
+            functionString = functionString.Remove(functionString.IndexOf('(')+1, functionString.Split('(')[1].Length);
+            functionString += tempStr;
+            localExercice.MethodSignature = functionString;
         }
         private void buttonShowDescription_Click(object sender, RoutedEventArgs e)
         {
@@ -98,6 +109,7 @@ namespace TrainingC.pages
                     flag = true;
                 }
             }
+            GetLocalMethodSignature();
             return flag;
         }
         private void buttonSaveCode_Click(object sender, RoutedEventArgs e)
@@ -126,7 +138,7 @@ namespace TrainingC.pages
             FileEditor.DeleteFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c");
             SaveFileFromTextBox();
 
-            if (ProgramMaker.AddToHeaderMethodSignature(exercice.MethodSignature, pathToTests + "MainHeader.h") &&
+            if (ProgramMaker.AddToHeaderMethodSignature(localExercice.MethodSignature, pathToTests + "MainHeader.h") &&
                 ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", false))
             {
                 if (ProgramMaker.MakeBatFile(pathToProgram + "autorun.bat", exercice.NameMethod, runProgramCommand))
