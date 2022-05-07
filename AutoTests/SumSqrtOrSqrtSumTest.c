@@ -3,7 +3,7 @@
 void SumSqrtOrSqrtSumTest()
 {
 	int flag[] = { 0, 0, 0, 0 };
-	double a, b;
+	int a, b;
 	a = 10;
 	b = 11;
 	if (SumSqrtOrSqrtSum(a, b) != 441)
