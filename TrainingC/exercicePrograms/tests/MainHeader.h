@@ -9,4 +9,3 @@ void FuncSumToNTest();
 void SquaresSumFromMtoNTest();
 void FactorialTest();
 void IsNumberToThirdPowerTest();
-double FuncSumToN(double , int );
