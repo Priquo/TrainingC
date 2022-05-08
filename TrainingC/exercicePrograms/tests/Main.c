@@ -7,4 +7,7 @@ void main()
 	//MinNumberFromThreeNumbersTest()
 	//PlusOneMinusTwoZeroIsTenTest();
 	//SumSqrtOrSqrtSum();
+	//FuncSumToNTest();
+	//SquaresSumFromMtoNTest();
+	//FactorialTest();
 }

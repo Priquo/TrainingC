@@ -38,5 +38,14 @@
     <ClCompile Include="SumSqrtOrSqrtSumTest.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="FuncSumToNTest.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="SquaresSumFromMtoNTest.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="FactorialTest.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

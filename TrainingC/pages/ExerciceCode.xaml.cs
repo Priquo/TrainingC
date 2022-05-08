@@ -28,9 +28,8 @@ namespace TrainingC.pages
         string pathToProgram = "../../exercicePrograms/programs/";
         string pathToTests = "../../exercicePrograms/tests/";
         Exercices exercice, localExercice;
-        readonly Regex maskFunction = new Regex(@"(\b(void|int|double|float|char|struct|\*)(\[.*\])*\s*[a-zA-Z]{1,}\.*\(.*\))");
-        //readonly Regex maskArguments = new Regex(@"(?<=\s*((void|int|double|float|char|struct|\*)(\[.*\])*)\s*)[a-zA-Z]{1,}");
-        readonly Regex maskArguments = new Regex(@"(\s*((void|int|double|float|char|struct|\*)(\[.*\])*)\s*)*[^a-zA-Z]{1,}[\(\)\,]*");
+        readonly Regex maskFunction = new Regex(@"(\b(void|int|double|float|char|struct|\*)(\s*\*)*\s*[a-zA-Z]{1,}\.*\(.*\))");
+        readonly Regex maskArguments = new Regex(@"(\s*((void|int|double|float|char|struct|\*)(\s*\*)*)\s*)*[^a-zA-Z\[\]*]{1,}[\(\)\,]*");
         public ExerciceCode(Exercices exercice)
         {
             InitializeComponent();

@@ -866,6 +866,7 @@
     <None Include="exercicePrograms\compiler\share\man\man7\fsf-funding.7" />
     <None Include="exercicePrograms\compiler\share\man\man7\gfdl.7" />
     <None Include="exercicePrograms\compiler\share\man\man7\gpl.7" />
+    <None Include="exercices\caseCYCLES\Level1.hel" />
     <None Include="exercices\caseIF\Level1.hel" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -877,13 +878,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="exercicePrograms\programs\" />
-    <Folder Include="exercices\caseARRAY\" />
-    <Folder Include="exercices\caseCYCLES\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="exercicePrograms\tests\FactorialTest.c" />
     <Content Include="exercicePrograms\tests\MainHeader.h" />
     <Content Include="exercicePrograms\tests\MaxNumberFromThreeNumbersTest.c" />
     <Content Include="exercicePrograms\tests\Main.c" />
+    <Content Include="exercicePrograms\tests\MinNumberFromThreeNumbersTest.c" />
+    <Content Include="exercicePrograms\tests\PlusOneMinusTwoZeroIsTenTest.c" />
+    <Content Include="exercicePrograms\tests\FuncSumToNTest.c" />
+    <Content Include="exercicePrograms\tests\SquaresSumFromMtoNTest.c" />
+    <Content Include="exercicePrograms\tests\SumSqrtOrSqrtSumTest.c" />
+    <None Include="exercices\caseARRAY\Level1.hel" />
     <Resource Include="images\c.ico" />
     <Content Include="exercicePrograms\compiler\bin\addr2line.exe" />
     <Content Include="exercicePrograms\compiler\bin\ar.exe" />
