@@ -10,4 +10,5 @@ void main()
 	//FuncSumToNTest();
 	//SquaresSumFromMtoNTest();
 	//FactorialTest();
+	//IsNumberToThirdPowerTest();
 }

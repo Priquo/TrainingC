@@ -9,7 +9,7 @@ void SquaresSumFromMtoNTest()
 	if (SumSqrtOrSqrtSum(a, b) != 45)
 	{
 		printf("\n‘актический результат не совпадает с ожидаемым.");
-		printf("\n¬ходные параметры:\na = %5.2d\tb = %5.2d\t", a, b);
+		printf("\n¬ходные параметры:\na = %d\tb = %d\t", a, b);
 	}
 	else
 		flag[0] = 1;
@@ -18,7 +18,7 @@ void SquaresSumFromMtoNTest()
 	if (SumSqrtOrSqrtSum(a, b) != 50)
 	{
 		printf("\n‘актический результат не совпадает с ожидаемым. —умма вычислена неверно.");
-		printf("\n¬ходные параметры:\na = %5.2d\tb = %5.2d\t", a, b);
+		printf("\n¬ходные параметры:\na = %d\tb = %d\t", a, b);
 	}
 	else
 		flag[1] = 1;
@@ -27,7 +27,7 @@ void SquaresSumFromMtoNTest()
 	if (SumSqrtOrSqrtSum(a, b) != 1)
 	{
 		printf("\n‘актический результат не совпадает с ожидаемым. —умма вычислена неверно.");
-		printf("\n¬ходные параметры:\na = %5.2d\tb = %5.2d\t", a, b);
+		printf("\n¬ходные параметры:\na = %d\tb = %d\t", a, b);
 	}
 	else
 		flag[2] = 1;
@@ -36,7 +36,7 @@ void SquaresSumFromMtoNTest()
 	if (SumSqrtOrSqrtSum(a, b) != 1855)
 	{
 		printf("\n‘актический результат не совпадает с ожидаемым. —умма вычислена неверно.");
-		printf("\n¬ходные параметры:\na = %5.2d\tb = %5.2d\t", a, b);
+		printf("\n¬ходные параметры:\na = %d\tb = %d\t", a, b);
 	}
 	else
 		flag[3] = 1;

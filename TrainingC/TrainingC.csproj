@@ -881,6 +881,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="exercicePrograms\tests\FactorialTest.c" />
+    <Content Include="exercicePrograms\tests\IsNumberToThirdPowerTest.c" />
     <Content Include="exercicePrograms\tests\MainHeader.h" />
     <Content Include="exercicePrograms\tests\MaxNumberFromThreeNumbersTest.c" />
     <Content Include="exercicePrograms\tests\Main.c" />

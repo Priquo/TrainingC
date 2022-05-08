@@ -9,7 +9,7 @@ void SumSqrtOrSqrtSumTest()
 	if (SumSqrtOrSqrtSum(a, b) != 441)
 	{
 		printf("\nФактический результат не совпадает с ожидаемым. Квадрат суммы оказался больше.");
-		printf("\nВходные параметры:\na = %5.2d\tb = %5.2d\t", a, b);
+		printf("\nВходные параметры:\na = %d\tb = %d\t", a, b);
 	}
 	else
 		flag[0] = 1;
@@ -18,7 +18,7 @@ void SumSqrtOrSqrtSumTest()
 	if (SumSqrtOrSqrtSum(a, b) != 39)
 	{
 		printf("\nФактический результат не совпадает с ожидаемым. Сумма квадратов оказалась больше.");
-		printf("\nВходные параметры:\na = %5.2d\tb = %5.2d\t", a, b);
+		printf("\nВходные параметры:\na = %d\tb = %d\t", a, b);
 	}
 	else
 		flag[1] = 1;
@@ -27,7 +27,7 @@ void SumSqrtOrSqrtSumTest()
 	if (SumSqrtOrSqrtSum(a, b) != 324)
 	{
 		printf("\nФактический результат не совпадает с ожидаемым. Квадрат суммы оказался больше.");
-		printf("\nВходные параметры:\na = %5.2d\tb = %5.2d\t", a, b);
+		printf("\nВходные параметры:\na = %d\tb = %d\t", a, b);
 	}
 	else
 		flag[2] = 1;
@@ -36,7 +36,7 @@ void SumSqrtOrSqrtSumTest()
 	if (SumSqrtOrSqrtSum(a, b) != 9)
 	{
 		printf("\nФактический результат не совпадает с ожидаемым. Программа не обработала одинаковый результат в обоих вычислениях");
-		printf("\nВходные параметры:\na = %5.2d\tb = %5.2d\t", a, b);
+		printf("\nВходные параметры:\na = %d\tb = %d\t", a, b);
 	}
 	else
 		flag[3] = 1;

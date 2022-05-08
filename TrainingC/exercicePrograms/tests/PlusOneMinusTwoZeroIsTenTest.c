@@ -8,7 +8,7 @@ void PlusOneMinusTwoZeroIsTenTest()
 	if (PlusOneMinusTwoZeroIsTen(a) != a + 1)
 	{
 		printf("\nФактический результат не совпадает с ожидаемым. Программа не обработала положительное число.");
-		printf("\nВходные параметры:\na = %5.2d", a);
+		printf("\nВходные параметры:\na = %d", a);
 	}
 	else
 		flag[0] = 1;
@@ -16,7 +16,7 @@ void PlusOneMinusTwoZeroIsTenTest()
 	if (PlusOneMinusTwoZeroIsTen(a) != 10)
 	{
 		printf("\nФактический результат не совпадает с ожидаемым. Программа не обработала число, равное нулю.");
-		printf("\nВходные параметры:\na = %5.2d", a);
+		printf("\nВходные параметры:\na = %d", a);
 	}
 	else
 		flag[1] = 1;
@@ -24,7 +24,7 @@ void PlusOneMinusTwoZeroIsTenTest()
 	if (PlusOneMinusTwoZeroIsTen(a) != a - 2)
 	{
 		printf("\nФактический результат не совпадает с ожидаемым. Программа не обработала отрицательное число");
-		printf("\nВходные параметры:\na = %5.2d", a);
+		printf("\nВходные параметры:\na = %d", a);
 	}
 	else
 		flag[2] = 1;
