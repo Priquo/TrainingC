@@ -143,23 +143,16 @@ namespace TrainingC.pages
             {
                 if (ProgramMaker.MakeBatFile(pathToProgram + "autorun.bat", exercice.NameMethod, runProgramCommand))
                 {
-                    Process proc = null;
                     try
-                    {                        
-                        string message = CommandLineHelper.Run(@"D:\moie\диплом\App\TrainingC\TrainingC\exercicePrograms\programs\autorun.bat");
-                        var g = 9;
-                        //proc = new Process();
-                        //proc.StartInfo.WorkingDirectory = pathToProgram;
-                        //proc.StartInfo.FileName = "autorun.bat";
-                        //proc.StartInfo.CreateNoWindow = false;
-                        //proc.Start();
-                        //proc.WaitForExit();
+                    {
+                        string message = CommandLineHelper.Run(FileEditor.GetFullPath(pathToProgram + "autorun.bat"), "/c chcp 65001", FileEditor.GetFullPath(pathToProgram + "autorun.bat").Replace("\\autorun.bat", ""));
+                        MessageBox.Show(message);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message,"Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
-                    //FileEditor.DeleteFile(pathToProgram + "autorun.bat");
+                FileEditor.DeleteFile(pathToProgram + "autorun.bat");
                     ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", true);
                 }
             }

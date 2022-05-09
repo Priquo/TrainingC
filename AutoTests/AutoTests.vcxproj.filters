@@ -26,25 +26,7 @@
     <ClCompile Include="test1.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="MaxNumberFromThreeNumbersTest.c">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="MinNumberFromThreeNumbersTest.c">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="PlusOneMinusTwoZeroIsTenTest.c">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="SumSqrtOrSqrtSumTest.c">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="SquaresSumFromMtoNTest.c">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="FactorialTest.c">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="IsNumberToThirdPower.c">
+    <ClCompile Include="ChangeFirstAndMaxElementTest.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

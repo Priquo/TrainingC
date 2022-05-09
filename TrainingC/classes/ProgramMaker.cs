@@ -10,11 +10,12 @@ namespace TrainingC.classes
     public static class ProgramMaker
     {
         static string pathCompiler = FileEditor.GetFullPath(@"..\compiler\bin\gcc.exe");
-        static string pathMain = FileEditor.GetFullPath(@"../tests/Main.c");
+        const string pathMain = @"../tests/Main.c";
         const string pathTests = @"../tests/";
         public static bool MakeBatFile(string path, string programFileName, string runOrNot)
-        {            
-            string batText = pathCompiler + " -c" + pathMain + " ../tests/" + programFileName + "Test.c " + programFileName + "/" + programFileName + ".c\n" +
+        {
+            
+            string batText = @"..\compiler\bin\gcc.exe -c ../tests/Main.c ../tests/" + programFileName + "Test.c " + programFileName + "/" + programFileName + ".c\n" +
                 @"..\compiler\bin\gcc.exe Main.o  " + programFileName + "Test.o " + programFileName + ".o -o " + programFileName +
                 "\n" + runOrNot;// + "\npause";
             bool result = FileEditor.CreateOrOpenFile(path, batText);            

@@ -880,6 +880,7 @@
     <Folder Include="exercicePrograms\programs\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="exercicePrograms\tests\ChangeFirstAndMaxElementTest.c" />
     <Content Include="exercicePrograms\tests\FactorialTest.c" />
     <Content Include="exercicePrograms\tests\IsNumberToThirdPowerTest.c" />
     <Content Include="exercicePrograms\tests\MainHeader.h" />

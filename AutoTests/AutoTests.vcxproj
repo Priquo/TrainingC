@@ -142,14 +142,8 @@
     <ClInclude Include="MainHeader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FactorialTest.c" />
-    <ClCompile Include="IsNumberToThirdPower.c" />
-    <ClCompile Include="MaxNumberFromThreeNumbersTest.c" />
-    <ClCompile Include="MinNumberFromThreeNumbersTest.c" />
-    <ClCompile Include="PlusOneMinusTwoZeroIsTenTest.c" />
+    <ClCompile Include="ChangeFirstAndMaxElementTest.c" />
     <ClCompile Include="Source.c" />
-    <ClCompile Include="SquaresSumFromMtoNTest.c" />
-    <ClCompile Include="SumSqrtOrSqrtSumTest.c" />
     <ClCompile Include="test1.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

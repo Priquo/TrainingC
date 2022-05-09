@@ -21,7 +21,7 @@ void FactorialTest()
 	else
 		flag[1] = 1;
 	a = 7;
-	if (Factorial(a, b) != 5040)
+	if (Factorial(a) != 5040)
 	{
 		printf("\n‘актический результат не совпадает с ожидаемым.");
 		printf("\n¬ходные параметры:\na = %d", a);
