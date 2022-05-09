@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrainingC.classes;
+using AndrewTweddle.Tools.Utilities.CommandLine;
 
 namespace TrainingC.pages
 {
@@ -144,19 +145,21 @@ namespace TrainingC.pages
                 {
                     Process proc = null;
                     try
-                    {
-                        proc = new Process();
-                        proc.StartInfo.WorkingDirectory = pathToProgram;
-                        proc.StartInfo.FileName = "autorun.bat";
-                        proc.StartInfo.CreateNoWindow = false;
-                        proc.Start();
-                        proc.WaitForExit();
+                    {                        
+                        string message = CommandLineHelper.Run(@"D:\moie\диплом\App\TrainingC\TrainingC\exercicePrograms\programs\autorun.bat");
+                        var g = 9;
+                        //proc = new Process();
+                        //proc.StartInfo.WorkingDirectory = pathToProgram;
+                        //proc.StartInfo.FileName = "autorun.bat";
+                        //proc.StartInfo.CreateNoWindow = false;
+                        //proc.Start();
+                        //proc.WaitForExit();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.StackTrace.ToString(),"Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show(ex.Message,"Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
-                    FileEditor.DeleteFile(pathToProgram + "autorun.bat");
+                    //FileEditor.DeleteFile(pathToProgram + "autorun.bat");
                     ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", true);
                 }
             }

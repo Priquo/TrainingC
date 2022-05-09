@@ -87,5 +87,10 @@ namespace TrainingC.classes
         {
             return File.Exists(path);
         }
+        static public string GetFullPath(string localPath)
+        {
+            FileInfo file = new FileInfo(localPath);
+            return file.FullName;
+        }
     }
 }

@@ -3117,5 +3117,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utilities\Utilities.CommandLine\Utilities.CommandLine.csproj">
+      <Project>{b156ef00-5246-4268-97a3-617204cd4846}</Project>
+      <Name>Utilities.CommandLine</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
