@@ -1,9 +1,5 @@
 #include "MainHeader.h"
 
-double* SortDescArray(double a[15]) {
-	return a;
-}
-
 void SortDescArrayTest()
 {
 	double example[15] = { 5.1, 15, 3.25, -14.3, 0, 8.88, 9, 0, 2.4, -4, 103, 2.2, 3.5, 1, -2 };

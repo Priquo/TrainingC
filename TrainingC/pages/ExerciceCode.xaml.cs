@@ -28,6 +28,7 @@ namespace TrainingC.pages
         string startTemplateCode;
         string pathToProgram = "../../exercicePrograms/programs/";
         string pathToTests = "../../exercicePrograms/tests/";
+        
         Exercices exercice, localExercice;
         readonly Regex maskFunction = new Regex(@"(\b(void|int|double|float|char|struct|\*)(\s*\*)*\s*[a-zA-Z]{1,}\.*\(.*\))");
         readonly Regex maskArguments = new Regex(@"(\s*((void|int|double|float|char|struct|\*)(\s*\*)*)\s*)*[^a-zA-Z\[\]*]{1,}[\(\)\,]*");
@@ -51,13 +52,16 @@ namespace TrainingC.pages
         void GetLocalMethodSignature()
         {
             var functionString = maskFunction.Match(textBoxProgramCode.Text).Value;
-            var tempStr = "";
-            foreach (var arg in maskArguments.Matches(functionString.Split('(')[1]))
+            if (exercice.Theme != "Упражнения на массивы")
             {
-                tempStr += arg;
+                var tempStr = "";
+                foreach (var arg in maskArguments.Matches(functionString.Split('(')[1]))
+                {
+                    tempStr += arg;
+                }
+                functionString = functionString.Remove(functionString.IndexOf('(') + 1, functionString.Split('(')[1].Length);
+                functionString += tempStr;
             }
-            functionString = functionString.Remove(functionString.IndexOf('(')+1, functionString.Split('(')[1].Length);
-            functionString += tempStr;
             localExercice.MethodSignature = functionString;
         }
         private void buttonShowDescription_Click(object sender, RoutedEventArgs e)

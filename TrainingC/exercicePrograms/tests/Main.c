@@ -14,4 +14,8 @@ void main()
 	//SquaresSumFromMtoNTest();
 	//FactorialTest();
 	//IsNumberToThirdPowerTest();
+	//SortDescArrayTest();
+	//ChangeEvenNumToMaxTest();
+	//CountNumbersBiggerThanFirstTest();
+	//ChangeFirstAndMaxElementTest();
 }
