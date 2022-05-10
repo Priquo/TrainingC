@@ -26,7 +26,7 @@
     <ClCompile Include="test1.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CountNumbersBiggerThanFirstTest.c">
+    <ClCompile Include="ChangeEvenNumToMaxTest.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

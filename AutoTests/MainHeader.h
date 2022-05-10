@@ -9,4 +9,4 @@
 //void SquaresSumFromMtoNTest();
 //void FactorialTest();
 //void IsNumberToThirdPowerTest();
-void CountNumbersBiggerThanFirstTest();
+void ChangeEvenNumToMaxTest();

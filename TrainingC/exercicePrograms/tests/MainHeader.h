@@ -12,3 +12,5 @@ void IsNumberToThirdPowerTest();
 void ChangeFirstAndMaxElementTest();
 void SortDescArrayTest();
 void CountNumbersBiggerThanFirstTest();
+void ChangeEvenNumToMaxTest();
+

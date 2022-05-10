@@ -880,6 +880,7 @@
     <Folder Include="exercicePrograms\programs\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="exercicePrograms\tests\ChangeEvenNumToMaxTest.c" />
     <Content Include="exercicePrograms\tests\ChangeFirstAndMaxElementTest.c" />
     <Content Include="exercicePrograms\tests\CountNumbersBiggerThanFirstTest.c" />
     <Content Include="exercicePrograms\tests\FactorialTest.c" />

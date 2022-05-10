@@ -142,7 +142,7 @@
     <ClInclude Include="MainHeader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CountNumbersBiggerThanFirstTest.c" />
+    <ClCompile Include="ChangeEvenNumToMaxTest.c" />
     <ClCompile Include="Source.c" />
     <ClCompile Include="test1.c" />
   </ItemGroup>

@@ -19,5 +19,5 @@ void main()
 		printf("\nВаша функция работает неправильно с параметрами: 0, 0.3, -5");
 	else
 		printf("\nВаша функция работает правильно с параметрами: 0, 0.3, -5");*/
-	CountNumbersBiggerThanFirstTest();
+	ChangeEvenNumToMaxTest();
 }
