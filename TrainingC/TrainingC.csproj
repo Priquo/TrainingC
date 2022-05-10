@@ -881,6 +881,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="exercicePrograms\tests\ChangeFirstAndMaxElementTest.c" />
+    <Content Include="exercicePrograms\tests\CountNumbersBiggerThanFirstTest.c" />
     <Content Include="exercicePrograms\tests\FactorialTest.c" />
     <Content Include="exercicePrograms\tests\IsNumberToThirdPowerTest.c" />
     <Content Include="exercicePrograms\tests\MainHeader.h" />
@@ -889,6 +890,7 @@
     <Content Include="exercicePrograms\tests\MinNumberFromThreeNumbersTest.c" />
     <Content Include="exercicePrograms\tests\PlusOneMinusTwoZeroIsTenTest.c" />
     <Content Include="exercicePrograms\tests\FuncSumToNTest.c" />
+    <Content Include="exercicePrograms\tests\SortDescArrayTest.c" />
     <Content Include="exercicePrograms\tests\SquaresSumFromMtoNTest.c" />
     <Content Include="exercicePrograms\tests\SumSqrtOrSqrtSumTest.c" />
     <None Include="exercices\caseARRAY\Level1.hel" />

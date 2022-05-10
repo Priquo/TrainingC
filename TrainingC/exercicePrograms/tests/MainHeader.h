@@ -10,5 +10,5 @@ void SquaresSumFromMtoNTest();
 void FactorialTest();
 void IsNumberToThirdPowerTest();
 void ChangeFirstAndMaxElementTest();
-
-
+void SortDescArrayTest();
+void CountNumbersBiggerThanFirstTest();
