@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrainingC.classes;
+using TrainingC.windows;
 using AndrewTweddle.Tools.Utilities.CommandLine;
 
 namespace TrainingC.pages
@@ -32,6 +33,7 @@ namespace TrainingC.pages
         Exercices exercice, localExercice;
         readonly Regex maskFunction = new Regex(@"(\b(void|int|double|float|char|struct|\*)(\s*\*)*\s*[a-zA-Z]{1,}\.*\(.*\))");
         readonly Regex maskArguments = new Regex(@"(\s*((void|int|double|float|char|struct|\*)(\s*\*)*)\s*)*[^a-zA-Z\[\]*]{1,}[\(\)\,]*");
+        readonly Regex maskNameMethod = new Regex(@"[^voidintdoublefloatcharstruct][^\s\*\s][a-zA-Z]+");
         public ExerciceCode(Exercices exercice)
         {
             InitializeComponent();
@@ -63,6 +65,7 @@ namespace TrainingC.pages
                 functionString += tempStr;
             }
             localExercice.MethodSignature = functionString;
+            localExercice.NameMethod = maskNameMethod.Match(functionString.Split('(')[0]).Value.ToString().Replace(" ", "");
         }
         private void buttonShowDescription_Click(object sender, RoutedEventArgs e)
         {
@@ -106,6 +109,13 @@ namespace TrainingC.pages
         private bool SaveFileFromTextBox()
         {
             bool flag = false;
+            GetLocalMethodSignature();
+            if (localExercice.NameMethod.Contains(exercice.NameMethod + "Test"))
+            {
+                MessageBox.Show("Название функции не может совпадать с названием метода-теста. Переименуйте метод", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return flag;
+            }
+            FileEditor.DeleteFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c");
             if (FileEditor.CreateFolder(pathToProgram + exercice.NameMethod))
             {
                 if (FileEditor.CreateOrOpenFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c", textBoxProgramCode.Text))
@@ -113,12 +123,10 @@ namespace TrainingC.pages
                     flag = true;
                 }
             }
-            GetLocalMethodSignature();
             return flag;
         }
         private void buttonSaveCode_Click(object sender, RoutedEventArgs e)
-        {
-            FileEditor.DeleteFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c");
+        {            
             if (SaveFileFromTextBox())
             {
                MessageBox.Show("Файл успешно сохранен", "Успех", MessageBoxButton.OK, MessageBoxImage.Asterisk);
@@ -132,6 +140,41 @@ namespace TrainingC.pages
             PageLoader.MainFrame.GoBack();
         }
 
+        private string OutputProgramText(string source)
+        {
+            string result = "";
+            List<string> data = source.Split('\n').ToList();
+            foreach (var str in data)
+            {
+                if (str.Contains("error"))
+                {
+                    if (str.Contains(exercice.NameMethod + "Test"))
+                    {
+                        result += "Ошибка при тестировании программы!\n";
+                        result += source;
+                        break;
+                    }
+                    else
+                    {
+                        result += "Ошибка при компиляции программы\n";
+                        result += source;
+                        break;
+                    }
+                }
+                if (str.Contains(localExercice.NameMethod) && !str.Contains("Main.") && !str.Contains("\\"))
+                {
+                    for (int i = data.IndexOf(str) + 1; i < data.Count; i++)
+                    {                        
+                        result += data[i];
+                        if (!data[i].Contains("\n"))
+                            result += "\n";
+                    }
+                    break;
+                }
+            }            
+            return result;
+        }
+
         private void CompileOrRunProgram(object sender, RoutedEventArgs e)
         {
             string runProgramCommand = exercice.NameMethod;
@@ -139,30 +182,33 @@ namespace TrainingC.pages
             
             if (buttonClicked.Name == "buttonCompileCode")
                 runProgramCommand = "";
-            FileEditor.DeleteFile(pathToProgram + exercice.NameMethod + "/" + exercice.NameMethod + ".c");
-            SaveFileFromTextBox();
 
-            if (ProgramMaker.AddToHeaderMethodSignature(localExercice.MethodSignature, pathToTests + "MainHeader.h") &&
-                ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", false))
+            if (SaveFileFromTextBox())
             {
-                if (ProgramMaker.MakeBatFile(pathToProgram + "autorun.bat", exercice.NameMethod, runProgramCommand))
+                if (ProgramMaker.AddToHeaderMethodSignature(localExercice.MethodSignature, pathToTests + "MainHeader.h", localExercice.NameMethod) &&
+                    ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", false))
                 {
-                    try
+                    if (ProgramMaker.MakeBatFile(pathToProgram + "autorun.bat", exercice.NameMethod, runProgramCommand))
                     {
-                        string message = CommandLineHelper.Run(FileEditor.GetFullPath(pathToProgram + "autorun.bat"), "/c chcp 65001", FileEditor.GetFullPath(pathToProgram + "autorun.bat").Replace("\\autorun.bat", ""));
-                        MessageBox.Show(message);
+                        try
+                        {
+                            string message = CommandLineHelper.Run(FileEditor.GetFullPath(pathToProgram + "autorun.bat"), "", FileEditor.GetFullPath(pathToProgram + "autorun.bat").Replace("\\autorun.bat", ""));
+                            OutputProgram messageBox = new OutputProgram(message);
+                            messageBox.ShowDialog();
+                        }
+                        catch (Exception ex)
+                        {
+                            OutputProgram messageBox = new OutputProgram(ex.Message);
+                            messageBox.ShowDialog();
+                        }
+                        FileEditor.DeleteFile(pathToProgram + "autorun.bat");
+                        ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", true);
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                FileEditor.DeleteFile(pathToProgram + "autorun.bat");
-                    ProgramMaker.MakeTestUncommentedInMainFile(pathToTests + "Main.c", exercice.NameMethod + "Test()", true);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Ошибка при подготовке программы к запуску", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                else
+                {
+                    MessageBox.Show("Ошибка при подготовке программы к запуску", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
     }

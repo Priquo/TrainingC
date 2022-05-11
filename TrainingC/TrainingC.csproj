@@ -74,10 +74,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="classes\ProgramMaker.cs" />
-    <Compile Include="StudyMaterials.xaml.cs">
+    <Compile Include="windows\OutputProgram.xaml.cs">
+      <DependentUpon>OutputProgram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windows\StudyMaterials.xaml.cs">
       <DependentUpon>StudyMaterials.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TaskDescription.xaml.cs">
+    <Compile Include="windows\TaskDescription.xaml.cs">
       <DependentUpon>TaskDescription.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -103,11 +106,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StudyMaterials.xaml">
+    <Page Include="windows\OutputProgram.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TaskDescription.xaml">
+    <Page Include="windows\StudyMaterials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\TaskDescription.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

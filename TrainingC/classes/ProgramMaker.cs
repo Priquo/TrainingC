@@ -9,9 +9,6 @@ namespace TrainingC.classes
 {
     public static class ProgramMaker
     {
-        static string pathCompiler = FileEditor.GetFullPath(@"..\compiler\bin\gcc.exe");
-        const string pathMain = @"../tests/Main.c";
-        const string pathTests = @"../tests/";
         public static bool MakeBatFile(string path, string programFileName, string runOrNot)
         {
             
@@ -21,7 +18,7 @@ namespace TrainingC.classes
             bool result = FileEditor.CreateOrOpenFile(path, batText);            
             return result;
         }
-        public static bool AddToHeaderMethodSignature(string methodSignature, string headerPath)
+        public static bool AddToHeaderMethodSignature(string methodSignature, string headerPath, string methodName)
         {
             bool result = false;
             try
@@ -29,6 +26,19 @@ namespace TrainingC.classes
                 List<string> dataHeader = FileEditor.ReadFile(headerPath);
                 if (dataHeader.Contains(methodSignature + ";"))
                     return true;
+                foreach (var names in dataHeader)
+                {
+                    if (names.Contains(methodName) && !names.Contains(methodName + "Test"))
+                    {
+                        dataHeader[dataHeader.IndexOf(names)] = methodSignature + ";";
+                        using (StreamWriter sw = new StreamWriter(headerPath, false))
+                        {
+                            foreach (var str in dataHeader)
+                                sw.WriteLine(str);
+                        }
+                        return true;
+                    }
+                }
                 using (StreamWriter sw = new StreamWriter(File.Open(headerPath, FileMode.Append)))
                 {
                     sw.WriteLine(methodSignature + ";");
