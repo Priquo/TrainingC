@@ -16,7 +16,8 @@ void ChangeEvenNumToMaxTest();
 
 int CountNumbersBiggerThanFirst(double a[15]);
 int * ChangeEvenNumToMax(int a[11]);
-int SquaresSumFromMtoN(int, int);
+int SquaresSumFromMtoN(int , int );
 double MinNumberFromThreeNumbers(double, double, double);
 int PlusOneMinusTwoZeroIsTen(int);
 int * ChangeFirstAndMaxElement(int a[9]);
+double MaxNumberFromThreeNumbers(double, double, double);

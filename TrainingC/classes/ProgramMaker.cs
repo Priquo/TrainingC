@@ -12,7 +12,7 @@ namespace TrainingC.classes
         public static bool MakeBatFile(string path, string programFileName, string runOrNot)
         {
             
-            string batText = @"..\compiler\bin\gcc.exe -c ../tests/Main.c ../tests/" + programFileName + "Test.c " + programFileName + "/" + programFileName + ".c\n" +
+            string batText = "chcp 1251\n" + @"..\compiler\bin\gcc.exe -c ../tests/Main.c ../tests/" + programFileName + "Test.c " + programFileName + "/" + programFileName + ".c\n" +
                 @"..\compiler\bin\gcc.exe Main.o  " + programFileName + "Test.o " + programFileName + ".o -o " + programFileName +
                 "\n" + runOrNot;// + "\npause";
             bool result = FileEditor.CreateOrOpenFile(path, batText);            
