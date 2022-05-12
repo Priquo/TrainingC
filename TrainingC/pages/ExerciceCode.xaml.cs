@@ -16,7 +16,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrainingC.classes;
 using TrainingC.windows;
-using AndrewTweddle.Tools.Utilities.CommandLine;
 
 namespace TrainingC.pages
 {
@@ -27,8 +26,8 @@ namespace TrainingC.pages
     {
         int selectionIndexInCode = 0;
         string startTemplateCode;
-        string pathToProgram = "../../exercicePrograms/programs/";
-        string pathToTests = "../../exercicePrograms/tests/";
+        string pathToProgram = "exercicePrograms/programs/";
+        string pathToTests = "exercicePrograms/tests/";
         
         Exercices exercice, localExercice;
         readonly Regex maskFunction = new Regex(@"(\b(void|int|double|float|char|struct|\*)(\s*\*)*\s*[a-zA-Z]{1,}\.*\(.*\))");

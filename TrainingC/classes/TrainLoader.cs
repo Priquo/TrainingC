@@ -10,7 +10,7 @@ namespace TrainingC.classes
 {
     class TrainLoader
     {
-        public string path = "../../exercices";
+        public string path = "exercices";
         List<Exercices> listExercices = new List<Exercices>();
         List<GroupBox> listTitles = new List<GroupBox>();
         List<ListBox> listBoxes = new List<ListBox>();

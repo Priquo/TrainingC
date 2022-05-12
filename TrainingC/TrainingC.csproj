@@ -73,6 +73,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="classes\CommandLineException.cs" />
+    <Compile Include="classes\CommandLineHelper.cs" />
     <Compile Include="classes\ProgramMaker.cs" />
     <Compile Include="windows\OutputProgram.xaml.cs">
       <DependentUpon>OutputProgram.xaml</DependentUpon>
@@ -3127,12 +3129,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Utilities\Utilities.CommandLine\Utilities.CommandLine.csproj">
-      <Project>{b156ef00-5246-4268-97a3-617204cd4846}</Project>
-      <Name>Utilities.CommandLine</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
