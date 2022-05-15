@@ -13,5 +13,3 @@ void ChangeFirstAndMaxElementTest();
 void SortDescArrayTest();
 void CountNumbersBiggerThanFirstTest();
 void ChangeEvenNumToMaxTest();
-
-int * ChangeFirstAndMaxElement(int a[9]);
