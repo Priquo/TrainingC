@@ -875,8 +875,12 @@
     <None Include="exercicePrograms\compiler\share\man\man7\fsf-funding.7" />
     <None Include="exercicePrograms\compiler\share\man\man7\gfdl.7" />
     <None Include="exercicePrograms\compiler\share\man\man7\gpl.7" />
-    <None Include="exercices\caseCYCLES\Level1.hel" />
-    <None Include="exercices\caseIF\Level1.hel" />
+    <None Include="exercices\caseCYCLES\Level1.hel">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="exercices\caseIF\Level1.hel">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -889,21 +893,51 @@
     <Folder Include="exercicePrograms\programs\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="exercicePrograms\tests\ChangeEvenNumToMaxTest.c" />
-    <Content Include="exercicePrograms\tests\ChangeFirstAndMaxElementTest.c" />
-    <Content Include="exercicePrograms\tests\CountNumbersBiggerThanFirstTest.c" />
-    <Content Include="exercicePrograms\tests\FactorialTest.c" />
-    <Content Include="exercicePrograms\tests\IsNumberToThirdPowerTest.c" />
-    <Content Include="exercicePrograms\tests\MainHeader.h" />
-    <Content Include="exercicePrograms\tests\MaxNumberFromThreeNumbersTest.c" />
-    <Content Include="exercicePrograms\tests\Main.c" />
-    <Content Include="exercicePrograms\tests\MinNumberFromThreeNumbersTest.c" />
-    <Content Include="exercicePrograms\tests\PlusOneMinusTwoZeroIsTenTest.c" />
-    <Content Include="exercicePrograms\tests\FuncSumToNTest.c" />
-    <Content Include="exercicePrograms\tests\SortDescArrayTest.c" />
-    <Content Include="exercicePrograms\tests\SquaresSumFromMtoNTest.c" />
-    <Content Include="exercicePrograms\tests\SumSqrtOrSqrtSumTest.c" />
-    <None Include="exercices\caseARRAY\Level1.hel" />
+    <Content Include="exercicePrograms\tests\ChangeEvenNumToMaxTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\ChangeFirstAndMaxElementTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\CountNumbersBiggerThanFirstTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\FactorialTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\IsNumberToThirdPowerTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\MainHeader.h">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\MaxNumberFromThreeNumbersTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\Main.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\MinNumberFromThreeNumbersTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\PlusOneMinusTwoZeroIsTenTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\FuncSumToNTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\SortDescArrayTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\SquaresSumFromMtoNTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exercicePrograms\tests\SumSqrtOrSqrtSumTest.c">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="exercices\caseARRAY\Level1.hel">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Resource Include="images\c.ico" />
     <Content Include="exercicePrograms\compiler\bin\addr2line.exe" />
     <Content Include="exercicePrograms\compiler\bin\ar.exe" />
