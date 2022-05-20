@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrainingC"
         mc:Ignorable="d"
-        Title="Описание задания" Height="400" Width="400">
+        Title="Описание задания" Height="500" MinHeight="500" Width="800" MinWidth="700"
+        Topmost="True">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <TextBlock x:Name="textblockDescription" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Grid>

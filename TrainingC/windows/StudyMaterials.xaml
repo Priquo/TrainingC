@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrainingC"
         mc:Ignorable="d"
-        Title="StudyMaterials" Height="300" Width="400">
+        Title="Лекционные материалы" Height="300" Width="400">
     <Grid>
         <StackPanel VerticalAlignment="Center">
             <TextBlock TextWrapping="Wrap">

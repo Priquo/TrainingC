@@ -9,9 +9,9 @@
       Title="TrainLevel1">
     <Page.Resources>
         <DataTemplate x:Key="itemsTemplate">
-            <DockPanel >
+            <DockPanel>
                 <Button Uid="{Binding ID}" Content="Начать" Click="Button_Click" DockPanel.Dock="Right"/>
-                <TextBlock Text="{Binding Description}" TextWrapping="WrapWithOverflow"  Width="600"/>
+                <TextBlock Text="{Binding Description}" TextWrapping="WrapWithOverflow" Width="800"/>
             </DockPanel>
         </DataTemplate>
     </Page.Resources>

@@ -174,6 +174,20 @@ namespace TrainingC.pages
             return result;
         }
 
+        private void ChangeFontSize(object sender, RoutedEventArgs e)
+        {
+            Button butt = (Button)sender;
+            switch (butt.Name)
+            {
+                case "buttonMinusFont":
+                    textBoxProgramCode.FontSize++;
+                break;
+                case "buttonPlusFont":
+                    textBoxProgramCode.FontSize--;
+                    break;
+            }
+        }
+
         private void CompileOrRunProgram(object sender, RoutedEventArgs e)
         {
             string runProgramCommand = exercice.NameMethod;

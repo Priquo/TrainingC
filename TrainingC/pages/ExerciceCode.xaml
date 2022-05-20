@@ -3,9 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
       xmlns:local="clr-namespace:TrainingC.pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="950"
       Title="ExerciceCode">
     <Grid>
         <Grid.RowDefinitions>
@@ -16,22 +17,29 @@
             <ColumnDefinition Width="747*"/>
             <ColumnDefinition Width="53*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="buttonShowDescription" Click="buttonShowDescription_Click" Margin="10 0">Задание</Button>
             <Button x:Name="buttonClear" Margin="10 0" Click="buttonClear_Click">Очистить</Button>
             <Button x:Name="buttonSaveCode" Margin="10 0" Click="buttonSaveCode_Click">Сохранить</Button>
             <Button x:Name="buttonCompileCode" Margin="10 0" Click="CompileOrRunProgram">Скомпилировать</Button>
             <Button x:Name="buttonCheckProgram" Margin="10 0" Click="CompileOrRunProgram">Запуск проверки</Button>
             <Button x:Name="buttonGoBack" Margin="50 0" Click="buttonGoBack_Click">Назад</Button>
+            <GroupBox Header="Размер шрифта" MaxHeight="70">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="buttonPlusFont" Margin="10 0" Width="30" Click="ChangeFontSize">-</Button>
+                    <Button x:Name="buttonMinusFont" Margin="10 0" Width="30" Click="ChangeFontSize">+</Button>
+                </StackPanel>
+            </GroupBox>
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="1">
+        <StackPanel Grid.Column="1" Grid.Row="1" Width="50">
+            <TextBlock Text="Шаблоны" TextWrapping="Wrap" FontSize="11"/>
             <Button x:Name="buttonTemplateIF" Click="buttonCasesTemplates_Click" Margin="0 10">if</Button>
             <Button x:Name="buttonTemplateWHILE" Margin="0 10" Click="buttonCasesTemplates_Click">while</Button>
             <Button x:Name="buttonTemplateDOWHILE" Click="buttonCasesTemplates_Click" Margin="0 10" Height="40">
-                <TextBlock TextWrapping="Wrap">do...while</TextBlock>
+                <TextBlock TextWrapping="Wrap">do... while</TextBlock>
             </Button>
             <Button x:Name="buttonTemplateFOR" Click="buttonCasesTemplates_Click" Margin="0 10">for</Button>
-        </StackPanel>
-        <TextBox x:Name="textBoxProgramCode" SelectionChanged="textBoxProgramCode_SelectionChanged" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" AcceptsTab="True" AcceptsReturn="True"/>
+        </StackPanel>        
+        <avalonEdit:TextEditor Name="textBoxProgramCode" FontFamily="Consolas" SyntaxHighlighting="C++" Grid.Row="1" Grid.Column="0"/>
     </Grid>
 </Page>
