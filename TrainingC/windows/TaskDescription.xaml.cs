@@ -21,6 +21,11 @@ namespace TrainingC
     public partial class TaskDescription : Window
     {
         Exercices exercice;
+        public TaskDescription(string text)
+        {
+            InitializeComponent();
+            textblockDescription.Text = text;            
+        }
         public TaskDescription(Exercices exercice)
         {
             InitializeComponent();

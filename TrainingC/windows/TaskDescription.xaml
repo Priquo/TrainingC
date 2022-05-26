@@ -13,6 +13,8 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <TextBlock x:Name="textblockDescription" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ScrollViewer>
+            <TextBlock x:Name="textblockDescription" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </ScrollViewer>
     </Grid>
 </Window>

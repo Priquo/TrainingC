@@ -16,11 +16,11 @@
         </DataTemplate>
     </Page.Resources>
     <Grid>
-        <Grid.RowDefinitions>
+        <!--<Grid.RowDefinitions>
             <RowDefinition Height="22*"/>
             <RowDefinition Height="203*"/>
-        </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
+        </Grid.RowDefinitions>-->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Visibility="Hidden">
             <Button x:Name="buttonStudyMaterial" Click="buttonStudyMaterial_Click" Margin="10 0">Лекционный материал</Button>
             <Button x:Name="buttonBack" Click="buttonBack_Click" Margin="10 0" Visibility="Hidden">Назад</Button>
         </StackPanel>

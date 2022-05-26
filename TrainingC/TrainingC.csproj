@@ -898,6 +898,9 @@
     <Folder Include="exercicePrograms\programs\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="docs\docs.hel">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="exercicePrograms\tests\ChangeEvenNumToMaxTest.c">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

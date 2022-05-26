@@ -28,5 +28,21 @@ namespace TrainingC
             frameMain.Navigate(new TrainLevel1());
             PageLoader.MainFrame = frameMain;
         }
+
+        private void buttonShowStudyMaterials_Click(object sender, RoutedEventArgs e)
+        {
+            StudyMaterials materials = new StudyMaterials();
+            materials.Show();
+        }
+
+        private void buttonShowDocs_Click(object sender, RoutedEventArgs e)
+        {
+            string text = FileEditor.ReadFileToLine("docs/docs.hel");
+            TaskDescription description = new TaskDescription(text);
+            description.Title = "Руководство";
+            description.MinHeight = 700;
+            description.textblockDescription.FontSize = 18;
+            description.Show();
+        }
     }
 }
