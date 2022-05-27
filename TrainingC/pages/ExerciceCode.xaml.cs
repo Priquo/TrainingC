@@ -24,7 +24,6 @@ namespace TrainingC.pages
     /// </summary>
     public partial class ExerciceCode : Page
     {
-        int selectionIndexInCode = 0;
         string startTemplateCode;
         string pathToProgram = "exercicePrograms/programs/";
         string pathToTests = "exercicePrograms/tests/";
@@ -73,37 +72,29 @@ namespace TrainingC.pages
         }
         private void buttonCasesTemplates_Click(object sender, RoutedEventArgs e)
         {
-            if (selectionIndexInCode != 0)
+            Button buttonClicked = (Button)sender;
+            string template = "";
+            switch (buttonClicked.Name)
             {
-                Button buttonClicked = (Button)sender;
-                string template = "";
-                switch (buttonClicked.Name)
-                {
-                    case "buttonTemplateIF":
-                        template = "if ()\n{\n\n}\nelse if ()\n{\n\n}\nelse\n{\n\n}\n";
-                        break;
-                    case "buttonTemplateFOR":
-                        template = "for (int i; i < n; i++)\n{\n\n}\n";
-                        break;
-                    case "buttonTemplateDOWHILE":
-                        template = "do\n{\n\n}\nwhile ()\n";
-                        break;
-                    case "buttonTemplateWHILE":
-                        template = "while ()\n{\n\n}\n";
-                        break;
-                }
-                textBoxProgramCode.Text = textBoxProgramCode.Text.Insert(selectionIndexInCode, template);
+                case "buttonTemplateIF":
+                    template = "if ()\n{\n\n}\nelse if ()\n{\n\n}\nelse\n{\n\n}\n";
+                    break;
+                case "buttonTemplateFOR":
+                    template = "for (int i; i < n; i++)\n{\n\n}\n";
+                    break;
+                case "buttonTemplateDOWHILE":
+                    template = "do\n{\n\n}\nwhile ()\n";
+                    break;
+                case "buttonTemplateWHILE":
+                    template = "while ()\n{\n\n}\n";
+                    break;
             }
+            textBoxProgramCode.SelectedText = template;
         }
 
         private void buttonClear_Click(object sender, RoutedEventArgs e)
         {
             textBoxProgramCode.Text = startTemplateCode;
-        }
-
-        private void textBoxProgramCode_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-            selectionIndexInCode = textBoxProgramCode.SelectionStart;
         }
         private bool SaveFileFromTextBox()
         {

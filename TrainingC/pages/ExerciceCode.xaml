@@ -41,7 +41,7 @@
             <Button x:Name="buttonTemplateFOR" Click="buttonCasesTemplates_Click" Margin="0 10">for</Button>
         </StackPanel>
         <Border BorderBrush="CadetBlue" BorderThickness="1"  Grid.Row="1" Grid.Column="0">
-            <avalonEdit:TextEditor Name="textBoxProgramCode" FontFamily="Consolas" SyntaxHighlighting="C++"/>
+            <avalonEdit:TextEditor Name="textBoxProgramCode" FontFamily="Consolas" SyntaxHighlighting="C++" />
         </Border>        
     </Grid>
 </Page>
